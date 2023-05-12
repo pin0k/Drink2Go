@@ -1,0 +1,104 @@
+.range__filter {
+  max-width: 280px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 318px;
+  }
+}
+
+.range__controls {
+  position: relative;
+  height: 24px;
+  margin-bottom: 20px;
+  padding-top: 11px;
+  background-color: $lightest-grey;
+  border-radius: 5px;
+}
+
+.range__scale {
+  height: 2px;
+  width: 100%;
+  background: $light-grey;
+}
+
+.range__bar {
+  width: 86%;
+  height: 2px;
+  background: $primary-lighter;
+}
+
+.range__toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 2px solid $primary-lighter;
+  background-color: $base-white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range__toggle--min {
+  left: 0;
+}
+
+.range__toggle--max {
+  left: 85%;
+}
+
+.price__controls {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    max-width: 118px;
+    max-height: 40px;
+    padding: 8px 10px;
+    text-align: center;
+    color: $base-black;
+    border: 2px solid $primary-lighter;
+    border-radius: 4px;
+    background-color: $base-white;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media (min-width: $tablet-width) {
+      max-width: 88px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 134px;
+    }
+
+    &::placeholder {
+      color: $base-grey;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background-color: $base-grey;
+    top: 19px;
+    right: 136px;
+
+    @media (min-width: $tablet-width) {
+      right: 107px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 155px;
+    }
+  }
+}

@@ -1,0 +1,221 @@
+.filter {
+  padding: 10px 0 20px 0;
+}
+
+.filter__list {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 223px 222px 223px;
+    grid-row: auto;
+    column-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    max-width: 318px;
+  }
+}
+
+.filter__item {
+  margin: 0;
+  padding: 0;
+  border: none;
+  max-width: 280px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 318px;
+  }
+}
+
+.filter__item legend {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.filter__item ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.filter__option {
+  margin-bottom: 20px;
+  padding-left: 34px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.filter__checkbox {
+  padding-left: 52px;
+}
+
+.filter__option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter__input--radio + label::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $base-grey;
+  border-radius: 50%;
+}
+
+.filter__input--radio + label::after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: $base-white;
+  border-radius: 50%;
+}
+
+.filter__input--radio:checked + label::before {
+  border-color: $base-primary;
+}
+
+.filter__input--radio:disabled + label {
+  color: $base-grey;
+}
+
+.filter__input--radio:disabled + label::before {
+  border-color: $light-grey;
+}
+
+.filter__input--radio:disabled:checked + label::before {
+  border-color: $light-grey;
+}
+
+.filter__input--radio:hover + label::before,
+.filter__input--radio:focus + label::before {
+  border-color: $primary-lighter;
+}
+
+.filter__input--radio:hover + label::after,
+.filter__input--radio:focus + label::after {
+  background-color: $primary-opacity;
+}
+
+.filter__input--radio:checked + label::after {
+  background-color: $base-primary;
+}
+
+.filter__input--radio:disabled:checked + label::after {
+  background-color: $light-grey;
+}
+
+.filter__input--checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -52px;
+  top: 0;
+  width: 42px;
+  height: 24px;
+  background-image: url("../../img/button/toggle-unchecked.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.filter__input--checkbox:hover + label::before,
+.filter__input--checkbox:focus + label::before {
+  background-image: url("../../img/button/toggle-hover.png");
+}
+
+.filter__input--checkbox:checked + label::before {
+  background-image: url("../../img/button/toggle-checked.png");
+}
+
+.filter__input--checkbox:disabled + label {
+  color: $base-grey;
+}
+
+.filter__input--checkbox:disabled + label::before {
+  background-image: url("../../img/button/toggle-disabled-uncheched.png");
+}
+
+.filter__input--checkbox:disabled:checked + label::before {
+  background-image: url("../../img/button/toggle-disabled-checked.png");
+}
+
+.filter__button-wrap {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/4;
+    width: 277px;
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.filter__button {
+  @media (min-width: $tablet-width) {
+    max-width: 137px;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 149px;
+    flex-grow: 1;
+  }
+}
+
+.filter__button:not(:last-child) {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+.filter__button--reset {
+  background-color: $base-white;
+  color: $base-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $base-white;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+    color: $base-white;
+  }
+}

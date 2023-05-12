@@ -1,0 +1,61 @@
+.contact {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contact__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-primary;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.contact__item {
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-black;
+  padding-left: 19px;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+
+  &::before {
+    content: "";
+    width: 13px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.contact__item--address {
+  &::before {
+    background-image: url("../../img/icons/mark.png");
+  }
+}
+
+.contact__item--phone {
+  &::before {
+    background-image: url("../../img/icons/phone.png");
+  }
+}

@@ -1,0 +1,40 @@
+.e-shop {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.e-shop__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-primary;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.e-shop__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.e-shop__link {
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $base-black;
+  padding: 8px 0;
+
+  &:hover,
+  &:focus {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+}

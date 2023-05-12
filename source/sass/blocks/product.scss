@@ -1,0 +1,111 @@
+.product-card {
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+  padding: 20px;
+  background-color: $base-white;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px;
+    max-width: 349px;
+    min-height: 440px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 317px;
+    min-height: 460px;
+  }
+}
+
+.product-card__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  color: $base-black;
+  margin: 0;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 289px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 257px;
+  }
+}
+
+.product-card__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 16px;
+  max-width: 240px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 289px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 257px;
+  }
+}
+
+.product-card__image {
+  order: -1;
+  max-width: 240px;
+  height: 228px;
+  padding: 20px;
+  margin: 0;
+  margin-bottom: 4px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    max-width: 289px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 257px;
+  }
+}
+
+.product-card__buy {
+  min-height: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 240px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 289px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 257px;
+  }
+
+  .button__text::before {
+    content: "";
+    width: 20px;
+    height: 16px;
+    display: block;
+    margin-right: 6px;
+    background-image: url("../../img/button/union.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.product-card__button {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}

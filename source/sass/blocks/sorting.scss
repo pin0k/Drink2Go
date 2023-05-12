@@ -1,0 +1,89 @@
+.sorting {
+  margin: 20px 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 10px 0 30px 0;
+  }
+}
+
+.sorting__title {
+  margin-right: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+  }
+}
+
+.sorting__list {
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  background-color: $lightest-grey;
+  background-image: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-primary;
+  cursor: pointer;
+  display: flex;
+  width: 162px;
+  height: 30px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 165px;
+  }
+}
+
+.sorting__list:hover,
+.sorting__list:focus {
+  background-color: $base-secondary;
+}
+
+.sorting__wrap {
+  position: relative;
+}
+
+.sorting__wrap::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-image: url("../../img/button/stroke.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.sorting__wrap:hover::after {
+  transform: rotate(180deg);
+}
+
+.sorting__item {
+  background-color: $base-white;
+  font-weight: 400;
+  color: $base-black;
+  padding: 8px 20px;
+  border-bottom: 1px solid $base-secondary;
+}
+
+.sorting__item:hover,
+.sorting__item:focus {
+  background-color: $base-secondary;
+}

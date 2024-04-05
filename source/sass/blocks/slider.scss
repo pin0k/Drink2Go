@@ -19,7 +19,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 1440px;
-    max-height: 714px;
+    max-height: max-content;
   }
 }
 
